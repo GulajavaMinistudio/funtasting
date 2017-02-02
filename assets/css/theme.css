@@ -87,7 +87,8 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 	color: rgba(255,255,255,.6);
 }
 
-.sidebar-nav > li > a > .fa{
+.sidebar-nav > li > a > .fa,
+.sidebar-nav-child > li > a > .fa{
 	margin-right: 20px;
 	font-size: 20px;
 	color: #FFF;
@@ -108,8 +109,9 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 
 .sidebar-nav-child > li > a{
 	margin: 0;
-	padding-left: calc(30px + 20px + 20px);
+	padding-left: 30px;
 	border-left: 5px yellow solid;
+	background-color: rgba(0,0,0,.15);
 }
 
 .sidebar-nav-child > li.active > a{
@@ -126,6 +128,25 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 
 .sidebar-footer button{
 	background-color: rgba(255,255,255,.7);
+}
+
+.sidebar-toggle{
+	position: absolute;
+	left: -35px;
+	padding: 10px;
+	margin-top: 3px;
+	background-color: transparent;
+	border: none;
+	border-radius: 3px;
+	font-size: 18px;
+}
+
+.sidebar-toggle:hover{
+	background-color: #CCC;
+}
+
+.sidebar-toggle, .sidebar-close{
+	display: none;
 }
 
 #content{
@@ -210,4 +231,68 @@ h1 *, h2 *, h3 *, h4 *, h5 *, h6 *{
 
 .panel-theme .panel-heading .panel-title{
 	color: #FFF;
+}
+
+/*RESPONSIVE*/
+@media(max-width: 992px){
+	#sidebar{
+		width: 70px;
+	}
+	
+	#sidebar .sidebar-title,
+	#sidebar .nav-label{
+		display: none;
+	}
+
+	.sidebar-nav > li > a,
+	.sidebar-nav-child > li > a{
+		padding: 10px;
+		text-align: center;
+	}
+
+	.sidebar-nav > li > a > .fa,
+	.sidebar-nav-child > li > a > .fa{
+		margin: 0 auto;
+		font-size: 22px;
+	}
+
+	.sidebar-nav > li.active > a{
+		padding-left: 10px;
+		color: #FFF;
+		border-left: 3px yellow solid;
+	}
+
+	.sidebar-footer{
+		display: block;
+		width: 100%;
+		position: relative;
+		padding: 25px 10px;
+		margin-top: 30px;
+	}
+
+	#content{
+		width: calc(100% - 70px);
+	}
+}
+
+@media(max-width: 768px){
+	#sidebar{
+		display: none;
+	}
+
+	.sidebar-toggle, .sidebar-close{
+		display: block;
+	}
+
+	#content{
+		width: 100%;
+	}
+
+	.content-nav{
+		padding: 25px 20px;
+	}
+
+	#content > .container-fluid{
+		padding:20px 20px;
+	}
 }

@@ -3,7 +3,6 @@
 .img-fit{
 	object-fit: cover;
 	object-position: center;
-	/*visibility: hidden;*/
 }
 
 .img-fade{

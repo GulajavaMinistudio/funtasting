@@ -14,20 +14,21 @@
 			<div id="sidebar-wrapper">
 				<div class="sidebar-title"><h2>Kelurahan</h2><span>Online</span></div>
 				<ul class="sidebar-nav">
-					<li class="active"><a href="#"><i class="fa fa-fw fa-home"></i>Dashboard</a></li>
+					<li class="sidebar-close"><a href="#"><i class="fa fa-fw fa-close"></i></a></li>
+					<li class="active"><a href="#"><i class="fa fa-fw fa-home"></i><span class="nav-label">Dashboard</span></a></li>
 					<li>
-						<a href="#nav-dokumen" data-toggle="collapse" aria-controls="collapse-post"><i class="fa fa-fw fa-archive"></i>Dokumen</a>
+						<a href="#nav-dokumen" data-toggle="collapse" aria-controls="nav-dokumen"><i class="fa fa-fw fa-archive"></i><span class="nav-label">Dokumen</span></a>
 						<ul class="sidebar-nav-child collapse collapseable" id="nav-dokumen">
-							<li><a href="#">Pengajuan Baru</a></li>
-							<li><a href="#">Arsip Lama</a></li>
-							<li><a href="#">Surat-Surat</a></li>
+							<li><a href="#"><i class="fa fa-upload"></i><span class="nav-label">Pengajuan Baru</span></a></li>
+							<li><a href="#"><i class="fa fa-upload"></i><span class="nav-label">Arsip Lama</span></a></li>
+							<li><a href="#"><i class="fa fa-upload"></i><span class="nav-label">Surat-Surat</span></a></li>
 						</ul>
 					</li>
-					<li><a href="#"><i class="fa fa-fw fa-user"></i>Pegawai</a></li>
-					<li><a href="#"><i class="fa fa-fw fa-cog"></i>Pengaturan</a></li>
+					<li><a href="#"><i class="fa fa-fw fa-user"></i><span class="nav-label">Pegawai</span></a></li>
+					<li><a href="#"><i class="fa fa-fw fa-cog"></i><span class="nav-label">Pengaturan</span></a></li>
 				</ul>
 				<div class="sidebar-footer">
-					<button class="btn btn-default btn-block"><i class="fa fa-power-off"></i> Logout</button>
+					<button class="btn btn-default btn-block"><i class="fa fa-fw fa-power-off"></i><span class="nav-label">logout</span></button>
 				</div>
 			</div>
 		</div>
@@ -36,7 +37,12 @@
 				<nav class="navbar navbar-default">
 					<div class="container-fluid">
 						<div class="navbar-header">
+							<!-- Navbar toggle button -->
 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+								<i class="fa fa-bars"></i>
+							</button>
+							<!-- Sidebar toggle button -->
+							<button type="button" class="sidebar-toggle">
 								<i class="fa fa-bars"></i>
 							</button>
 							<a class="navbar-brand text-size-24" href="#">Dashboard</a>
@@ -65,7 +71,7 @@
 			</div>
 			<div class="container-fluid">
 				<div class="row">
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-sm-6 col-md-4">
 						<div class="panel panel-default panel-widget">
 							<div class="panel-body">
 								<h4>Main Title</h4>
@@ -73,7 +79,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-md-4">
+					<div class="col-xs-12 col-sm-6 col-md-4">
 						<div class="panel panel-default panel-widget">
 							<div class="panel-body">
 								<h4>Main Title</h4>
@@ -208,10 +214,14 @@
 								<span class="panel-title text-size-20 text-black"><i class="fa fa-building"></i> Company Description</span>
 							</div>
 							<div class="panel-body">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea maiores accusamus, animi odit iure eos eius ut corporis nobis voluptate obcaecati voluptates alias recusandae, incidunt velit! Voluptatibus maxime commodi consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro sunt culpa eum numquam quaerat modi quidem sint, nihil illum aspernatur, fugit. Error, consectetur, ad. Minima quisquam quaerat aliquid nostrum vel.</p>
-								<div class="break-30"></div>
-								<h4>Sub Titile</h4>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, fuga praesentium, facilis pariatur tenetur iusto quidem, porro saepe, dignissimos expedita voluptate aut non alias temporibus est dolores magni reprehenderit perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, nobis, rerum? Iusto totam repellendus quod, facilis excepturi recusandae assumenda repellat repudiandae soluta est sit, illo iure fugit mollitia. Debitis, beatae.</p>
+								<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+									Button with data-target
+								</button>
+								<div class="collapse.in" id="collapseExample">
+									<div class="well">
+										...
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -222,4 +232,5 @@
 </body>
 <script src="assets/plugins/jquery/jquery-3.1.1.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/theme.js"></script>
 </html>
